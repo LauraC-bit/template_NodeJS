@@ -8,11 +8,11 @@ services:
     volumes:
       - mongo-db-dev:/data/db
 
-  basic_server:
+  node_basics:
     command: npm run dev
     restart: unless-stopped
-    container_name: basic_server_c
-    image: basic_server_i
+    container_name: node_basics_c
+    image: node_basics_i
     build:
       context: .
       dockerfile: Dockerfile.dev
